@@ -87,6 +87,7 @@ console.log(resultFlag);
 
 // splice() : 배열의 특정요소 제거, 삽입
 console.log(`============================`);
+console.log(`============================`);
 console.log(foodList);
 
 foodList.splice(1, 2);
