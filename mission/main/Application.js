@@ -4,7 +4,6 @@ alert(`🔫 러시안 룰렛게임을 시작합니다.`);
 alert(`##### 🎲 규칙은 다음과 같습니다. #####\n1. 게임에 참가할 인원과 총알 갯수를 입력합니다.\n2. 총알을 랜덤으로 격발 시킵니다.\n3. 총알을 모두 소진하면 게임이 종료됩니다.`);
 alert(`규칙을 잘 숙지하였다 믿고,\n🔫 러시안 룰렛게임을 진행하도록 하겠습니다.`);
 
-
 // 참가할 인원 입력 받기
 
 var memberSize = 0;
@@ -71,20 +70,24 @@ while (bullet > 0) {
     if (order === playerList.length) {
         order = 0;
     }
+
     var player = playerList[order++];
 
     var randomShoot = (Math.floor((Math.random() * (10 - 1 + 1)) + 1)) % 2;
 
     if (randomShoot) {
-        alert(`격발 -> ${player}`);
+
+        alert(`🔫 총알 격발 성공\n 💥 ${player} 사망 ☠️`);
         playerList.splice(playerList.indexOf(player), 1);
         bullet--;
+        order--;
 
         if (playerList.length === 1) {
             break;
         }
+
     } else {
-        alert(`미격발 -> ${player}`);
+        alert(`🔫 총알 격발 실패\n 💨 ${player} 생존 😮‍💨`);
     }
 
 }
@@ -93,13 +96,10 @@ while (bullet > 0) {
 
 if (playerList.length > 1) {
     alert(`### 축하드립니다. 2명 이상이 생존하시다니.... ###`);
-    alert(`### 운이 좋다고 해야할지..킄ㄱ큭 ###`);
     alert(`### 생존자 명단입니다.. [ ${playerList} ] ###\n앞으로 착하게 사십쇼.`);
-    alert(`게 임 종 료`);
+    alert(`### 게 임 종 료 ###`);
 } else {
     alert(`### 축하드립니다. 혼자 살아남으셨군요 ###`);
-    alert(`### 그 옷에 묻은 피는 못 본체 해드립죠..킄ㄱ큭크 ###`);
     alert(`### 아시겠지만, 생존자 명단입니다... [ ${playerList} ] ###`);
-    alert(`### 그럼...킄긐ㄱ..이만..크크큭 ###`);
-    alert(`게 임 종 료`);
+    alert(`### 게 임 종 료 ###`);
 }
