@@ -52,6 +52,18 @@
         //   border 2px dashed violet 적용 (3번째부터 끝까지 선택)
         [...document.querySelectorAll('#list1 li:nth-child(n+3)')]
         .forEach(index => index.style.border = '2px dashed violet');
+
+        const $liList = [...document.querySelectorAll('#list1 li')];
+        $liList.forEach(($li, idx) => {
+            if (idx % 2 === 1) {
+                $li.style.background = 'gray';
+            }
+        });
+
+        const [$first, $second, ...$others] = $liList;
+        const $last = $others[$others.length - 1];
+        $first.style.color = 'red';
+
     </script>
 
 </body>
