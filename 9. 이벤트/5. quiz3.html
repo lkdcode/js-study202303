@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="../common.css">
+
+    <style>
+        #wrap .header {
+
+            display: flex;
+            justify-content: center;
+
+            margin: 50px auto;
+        }
+
+        #wrap .header .contains {
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            align-items: center;
+            width: 200px;
+
+        }
+
+        #wrap .header .contains h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: bisque;
+
+            background: #b30f0f;
+            width: 100%;
+            text-align: center;
+
+            padding: 15px;
+            border: 2px solid #000;
+        }
+
+        #wrap .header .contains h1:hover {
+            cursor: pointer;
+        }
+
+
+
+        #wrap .header .contains ul>a {
+            display: block;
+            font-size: 1.5em;
+            margin: 10px 15px;
+            padding: 15px 50px;
+
+            background: rgb(225, 224, 224);
+        }
+
+        #wrap .header .contains ul>a.hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <header class="header">
+            <div class="contains">
+                <h1>Drop</h1>
+                <ul>
+                    <a href="#">Menu1</a>
+                    <a href="#">Menu2</a>
+                    <a href="#">Menu3</a>
+                    <a href="#">Menu4</a>
+                    <a href="#">Menu5</a>
+                </ul>
+            </div>
+
+        </header>
+
+
+    </div>
+
+    <script>
+        const $btn = document.querySelector('h1');
+        const $list = [...document.querySelectorAll('a')];
+
+
+        console.log($btn);
+
+        $btn.onclick = () => {
+            $list.forEach($li => $li.classList.toggle('hide'));
+        };
+    </script>
+</body>
+
+</html>
