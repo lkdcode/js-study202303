@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="fruits">
+        <li>사과</li>
+    </div>
+
+    <script>
+        // 만들면서 추가하는 함수
+        function append({
+            $parent,
+            tagName,
+            text,
+        }) {
+            appendNewTag($parent, makeTag(tagName, text));
+        }
+
+        // 태그 이름과 텍스트를 전달받으면 태그를 생성하는 함수
+        function makeTag(tagName, text = '') {
+            // tagName 의 태그 생성
+            const $newTag = document.createElement(tagName);
+            // text 추가
+            if (text) $newTag.textContent = text;
+            return $newTag;
+        }
+
+        // 부모 태그를 알려주면 자식을 추가해주는 함수
+        function appendNewTag($parent, $target) {
+            // 새로운 노드를 자식으로 추가
+            $parent.appendChild($target);
+        }
+
+        const $fruits = document.getElementById('fruits');
+
+        const fruitNames = ['바나나', '딸기', '포도', '자몽', '오렌지', '레몬', ];
+
+        fruitNames.forEach(name => {
+            append({
+                $parent: $fruits,
+                tagName: 'li',
+                text: name,
+            })
+        });
+    </script>
+
+</body>
+
+</html>
