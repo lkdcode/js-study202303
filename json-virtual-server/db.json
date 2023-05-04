@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "account": "abc1234",
+      "userName": "주자킹",
+      "address": "캘리포니아"
+    },
+    {
+      "id": 2,
+      "account": "def9999",
+      "userName": "홍길똥",
+      "address": "한양도성"
+    },
+    {
+      "id": 7,
+      "account": "abc7777",
+      "userName": "칠팔구",
+      "address": "일이삼"
+    },
+    {
+      "id": 8,
+      "account": "호호호",
+      "userName": "히히히",
+      "address": "호호동"
+    },
+    {
+      "id": 9,
+      "account": "계꼐꼐꼐꼐",
+      "userName": "이이이이이이",
+      "address": "주주주주주주"
+    },
+    {
+      "id": 10,
+      "account": "계정명명",
+      "userName": "이름름",
+      "address": "주소소"
+    }
+  ],
+  "boards": []
+}
